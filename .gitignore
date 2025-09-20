@@ -1,0 +1,7 @@
+.env
+
+simple_auth_manager_passwords.json.generated
+
+logs/
+
+fix_pgadmin_permissions.sh

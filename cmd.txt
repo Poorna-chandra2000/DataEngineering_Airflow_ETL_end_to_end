@@ -1,0 +1,13 @@
+docker ps
+docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+
+docker-compose up -d airflow-webserver
+
+#pgadmin might start restarting so stop it remove it and rebuild again
+docker compose stop pgadmin
+docker compose rm -f pgadmin
+docker compose up -d pgadmin
+
+
+#FOR CHECKING DB
+ docker exec -it $(docker ps -qf "name=postgres") psql -U etl_user -d etl_db

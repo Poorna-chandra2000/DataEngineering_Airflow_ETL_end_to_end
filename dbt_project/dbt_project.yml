@@ -1,0 +1,5 @@
+name: 'etl_dbt'
+version: '1.0'
+config-version: 2
+profile: 'etl_profile'
+model-paths: ['models']
